@@ -1,0 +1,39 @@
+# Optional bridge YAML consumed by BridgeRunner (not by goSPL itself)
+# Run B: goSPL SPL → push elev to raster → Landlab DDTD → D8 FA → MFD/DepressionFinder
+# → BedrockLandslider → pull Δz only → goSPL FA → sed/sea.
+# (No SPACE. DDTD on regular raster — not Voronoi. PriorityFlood off — richdem crash on this Mac.)
+# raster_scale: API default 1.0 (dx_raster = dx_mesh / scale). Notebook may set 2.0.
+flow: landlab
+landlab_flow_component: FlowAccumulator
+landlab_flow_kwargs:
+  flow_director: D8
+
+fluvial:
+  backend: gospl.spl
+
+hillslope:
+  backend: landlab.DepthDependentTaylorDiffuser
+  kwargs:
+    # D = soil_transport_velocity × soil_transport_decay_depth = 0.5
+    # matches Run A goSPL hillslopeKa: 0.5
+    soil_transport_velocity: 0.5
+    soil_transport_decay_depth: 1.0
+    slope_crit: 1.0
+    nterms: 2
+    dynamic_dt: true
+    if_unstable: pass
+
+mass_wasting:
+  backend: landlab.BedrockLandslider
+  kwargs:
+    angle_int_frict: 1.0
+    # Campforts et al. ~15 kPa, t_LS ~ 2e4 yr (not tutorial 1e3 / 1000)
+    cohesion_eff: 15000.0
+    landslides_return_time: 20000.0
+    landslides_on_boundary_nodes: false
+
+soil_policy: auto
+# At dt=5 kyr, landlab_substeps_for_dt(target=10 kyr) → 1.
+# Notebook overrides via landlab_substeps_for_dt(DT_YR) when you change DT_YR.
+substeps: 1
+# raster_scale: 1.0

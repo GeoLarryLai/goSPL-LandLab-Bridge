@@ -1,0 +1,33 @@
+# Conda env for the goSPL–Landlab bridge comparison notebook.
+#
+# Create:
+#   conda env create -f environment_gospl_landlab.yml
+# Activate:
+#   conda activate gospl-landlab
+# Then (from this project folder):
+#   pip install -e .
+#   python -m ipykernel install --user --name gospl-landlab --display-name "Python (gospl-landlab)"
+#
+# Notes:
+# - goSPL comes from the geodels channel (prebuilt Fortran extensions).
+# - PETSc is pinned to 3.21.x (OpenMPI-linked) per goSPL install docs.
+# - Prefer vtk-base (pulled by gospl) over full vtk on macOS.
+# - landlab pulls richdem; PriorityFlood may abort — demo uses FlowAccumulator.
+
+name: gospl-landlab
+channels:
+  - geodels
+  - conda-forge
+dependencies:
+  - python=3.11
+  - gospl=2026.7.14
+  - landlab>=2.9
+  - gflex>=1.1
+  - matplotlib
+  - joblib
+  - imageio
+  - imageio-ffmpeg
+  - pyyaml
+  - jupyter
+  - ipykernel
+  - pip

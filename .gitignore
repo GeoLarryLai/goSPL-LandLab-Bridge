@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+.venv/
+.env
+*.env
+.pypirc
+examples/outputs/
+*conflicted copy*
+AGENTS.md
+AI_EDITING_LOG.md

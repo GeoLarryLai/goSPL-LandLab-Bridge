@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gospl-landlab"
+version = "0.0.1"
+description = "Add-on bridge: run Landlab landscape-evolution components inside goSPL timesteps"
+readme = "README-pypi.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-or-later"
+authors = [{ name = "Larry Syu-Heng Lai", email = "larrysyuhenglai@gmail.com" }]
+dependencies = [
+  "numpy",
+  "scipy",
+  "landlab>=2.6",
+  "joblib",
+  "imageio>=2.31",
+  "imageio-ffmpeg",
+  "h5py",
+  "pandas",
+  "matplotlib",
+  "tqdm",
+  "pyyaml",
+  "threadpoolctl",
+  "pillow",
+]
+
+[project.optional-dependencies]
+gospl = ["gospl", "mpi4py", "petsc4py"]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/GeoLarryLai/goSPL-LandLab-Bridge"
+Repository = "https://github.com/GeoLarryLai/goSPL-LandLab-Bridge"
+
+[tool.setuptools.packages.find]
+include = ["gospl_landlab*"]

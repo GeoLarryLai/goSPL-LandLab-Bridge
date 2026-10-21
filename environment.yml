@@ -1,0 +1,23 @@
+# Conda env for the goSPL–Landlab bridge.
+#
+#   conda env create -f environment.yml
+#   conda activate gospl-landlab
+#   pip install -e .
+
+name: gospl-landlab
+channels:
+  - geodels
+  - conda-forge
+dependencies:
+  - python=3.11
+  - gospl=2026.7.14
+  - landlab>=2.9
+  - gflex>=1.1
+  - matplotlib
+  - joblib
+  - imageio
+  - imageio-ffmpeg
+  - pyyaml
+  - jupyter
+  - ipykernel
+  - pip
