@@ -30,8 +30,23 @@ The same clip is also in [`docs/media/compare_combo.mp4`](docs/media/compare_com
 ## Installation
 
 ```bash
+pip install "landlab>=2.6"
+pip install gospl-landlab-bridge
+```
+
+Landlab’s own install notes are at [landlab.readthedocs.io](https://landlab.readthedocs.io/en/latest/installation.html). goSPL is a separate install. Follow [goSPL’s conda instructions](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html).
+
+From a clone of this repo, instead of the PyPI line:
+
+```bash
+pip install -e .
+```
+
+Or create the bridge env, which does not install goSPL:
+
+```bash
 conda env create -f environment.yml
-conda activate gospl-landlab
+conda activate gospl-landlab-bridge
 pip install -e .
 ```
 
@@ -41,8 +56,6 @@ On a Mac, call this before `from gospl.model import Model`:
 from gospl_landlab import install_vtk_shim
 install_vtk_shim(force=True)
 ```
-
-goSPL is pinned to 2026.7.14 from the [geodels channel](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html). A goSPL-only env is in `environment_gospl.yml`.
 
 ## Citation
 
@@ -112,11 +125,27 @@ print(probe_component("BedrockLandslider"))
 
 ## Dependencies
 
-Requires Python >=3.10.
+Python >= 3.10.
 
-Installed with the package: numpy, scipy, landlab >=2.6, joblib, imageio, imageio-ffmpeg, h5py, pandas, matplotlib, tqdm, pyyaml, threadpoolctl, pillow.
+**With the package**
 
-Optional: `gospl`, `mpi4py`, `petsc4py`.
+- `numpy` — arrays
+- `scipy` — interpolation used when mapping the mesh
+- `landlab>=2.6` — hillslope, flow, and landslide components
+- `joblib` — parallel frame plots
+- `imageio>=2.31`, `imageio-ffmpeg` — GIF and MP4 output
+- `h5py` — goSPL HDF5 output
+- `pandas` — tables inside the goSPL pit-fill patch
+- `matplotlib` — maps and sections
+- `tqdm` — progress bars
+- `pyyaml` — run settings
+- `threadpoolctl` — BLAS thread count
+- `pillow` — image frames
+
+**Installed separately**
+
+- goSPL, from its [conda instructions](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html)
+- Optional: `mpi4py`, `petsc4py` when you run goSPL with MPI
 
 ## Common problems
 

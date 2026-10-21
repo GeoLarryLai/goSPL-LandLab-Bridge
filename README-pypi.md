@@ -1,12 +1,36 @@
 # goSPL–Landlab bridge
 
-v0.0.1
-
-Run Landlab erosion tools inside a goSPL timestep without changing goSPL or Landlab.
+**gospl-landlab-bridge** runs Landlab mountain-erosion components inside a goSPL timestep, without changing goSPL or Landlab. goSPL still owns the mesh, the time loop, rivers, sediment routing, and the basin outputs.
 
 This work resulted from an ongoing collaboration with **Dr. Xuesong Ding** at the Bureau of Economic Geology, The University of Texas at Austin.
 
-The comparison video and the demo notebook are in the [GitHub repository](https://github.com/GeoLarryLai/goSPL-LandLab-Bridge).
+## Requirements
+
+- Python >= 3.10
+- [Landlab](https://landlab.readthedocs.io/) (`pip install "landlab>=2.6"`)
+- [goSPL](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html) when you want to run a model. The bridge itself imports without it.
+
+## Installation
+
+```bash
+pip install gospl-landlab-bridge
+```
+
+```python
+import gospl_landlab
+```
+
+## Citation
+
+Lai, L.S.-H. (2026) goSPL-LandLab-Bridge.
+
+## Key Features
+
+- Three slots (`fluvial`, `hillslope`, `mass_wasting`) set to a goSPL law or a Landlab component
+- Push a goSPL mesh to a Landlab raster and pull elevation and soil change back
+- Pass that sediment into goSPL stratigraphy
+
+The comparison notebook is on [GitHub](https://github.com/GeoLarryLai/goSPL-LandLab-Bridge/blob/main/goSPL-LandLab-Bridge_1_compare_SPL_vs_HyLands.ipynb).
 
 ## License
 

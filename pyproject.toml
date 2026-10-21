@@ -3,7 +3,7 @@ requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "gospl-landlab"
+name = "gospl-landlab-bridge"
 version = "0.0.1"
 description = "Add-on bridge: run Landlab landscape-evolution components inside goSPL timesteps"
 readme = "README-pypi.md"
