@@ -17,7 +17,9 @@ https://github.com/user-attachments/assets/fc4a3a02-10cc-48bb-a6fb-de4a25fe8593
 
 The same clip is also in [`docs/media/compare_combo.mp4`](docs/media/compare_combo.mp4).
 
-Run A is goSPL stream-power plus linear diffusion. Run B is goSPL stream-power plus Landlab DDTD and BedrockLandslider. The domain is 60×40 km over 4 Myr.
+The question behind the clip is whether basin stratigraphy can record a change in mountain topography and in the surface processes that shape it. The two runs share the same uplift and subsidence. The domain is 60×40 km over 4 Myr.
+
+Run A uses goSPL’s river incision and linear hillslope creep. Run B keeps that river incision, and adds Landlab’s soil-depth-dependent hillslope diffusion and the HyLands bedrock landslide model. Sediment eroded in the mountains is passed into the basin fill. The landslides arrive as pulses, so the mountain and the deep-water floor change in steps that Run A does not show.
 
 ## Installation
 
