@@ -7,7 +7,7 @@ This work resulted from an ongoing collaboration with **Dr. Xuesong Ding** at th
 ## Requirements
 
 - Python >= 3.10
-- [Landlab](https://landlab.readthedocs.io/) (`pip install "landlab>=2.6"`)
+- [Landlab](https://landlab.readthedocs.io/en/latest/installation.html) (`pip install landlab`)
 - [goSPL](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html) when you want to run a model. The bridge itself imports without it.
 
 ## Installation

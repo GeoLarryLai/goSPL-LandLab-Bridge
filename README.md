@@ -1,6 +1,6 @@
 # goSPL–Landlab bridge
 
-![PyPI version](https://img.shields.io/pypi/v/gospl-landlab.svg) ![PyPI downloads](https://img.shields.io/pypi/dm/gospl-landlab.svg)
+![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg) ![PyPI downloads](https://img.shields.io/pypi/dm/gospl-landlab-bridge.svg)
 
 v0.0.2
 
@@ -12,6 +12,43 @@ The aim is a source-to-sink forward model. Deep-time stratigraphy is the combine
 
 > [!NOTE]
 > This work resulted from an ongoing collaboration with **Dr. Xuesong Ding** at the Bureau of Economic Geology, The University of Texas at Austin.
+
+## Installation
+
+```bash
+pip install gospl-landlab-bridge
+```
+
+```python
+import gospl_landlab_bridge
+```
+
+Python cannot import a hyphen, so `gospl-landlab-bridge` is imported as `gospl_landlab_bridge`.
+
+From this repository:
+
+```bash
+conda env create -f environment.yml
+conda activate gospl-landlab-bridge
+pip install -e .
+```
+
+## goSPL and Landlab
+
+```bash
+pip install landlab
+```
+
+Landlab details: [installation](https://landlab.readthedocs.io/en/latest/installation.html).
+
+goSPL: [conda install](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html).
+
+On a Mac, before `from gospl.model import Model`:
+
+```python
+from gospl_landlab_bridge import install_vtk_shim
+install_vtk_shim(force=True)
+```
 
 ## Comparison video
 
@@ -26,42 +63,6 @@ Run B keeps that river incision and adds Landlab’s soil-depth-dependent Taylor
 https://github.com/user-attachments/assets/fc4a3a02-10cc-48bb-a6fb-de4a25fe8593
 
 The same clip is also in [`docs/media/compare_combo.mp4`](docs/media/compare_combo.mp4).
-
-## Installation
-
-```bash
-pip install "landlab>=2.6"
-pip install gospl-landlab-bridge
-```
-
-```python
-import gospl_landlab_bridge
-```
-
-Python cannot import a name that contains a hyphen, so `gospl-landlab-bridge` is imported as `gospl_landlab_bridge`.
-
-Landlab’s own install notes are at [landlab.readthedocs.io](https://landlab.readthedocs.io/en/latest/installation.html). goSPL is a separate install. Follow [goSPL’s conda instructions](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html).
-
-From a clone of this repo, instead of the PyPI line:
-
-```bash
-pip install -e .
-```
-
-Or create the bridge env, which does not install goSPL:
-
-```bash
-conda env create -f environment.yml
-conda activate gospl-landlab-bridge
-pip install -e .
-```
-
-On a Mac, call this before `from gospl.model import Model`:
-
-```python
-from gospl_landlab_bridge import install_vtk_shim
-install_vtk_shim(force=True)
-```
 
 ## Citation
 
