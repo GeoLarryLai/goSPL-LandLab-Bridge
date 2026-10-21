@@ -11,9 +11,11 @@ goSPL still owns the mesh, time loop, rivers, sediment routing, tectonics, and o
 > [!NOTE]
 > This work resulted from an ongoing collaboration with **Dr. Xuesong Ding** at the Bureau of Economic Geology, The University of Texas at Austin.
 
-<video src="docs/media/compare_combo.mp4" autoplay muted loop playsinline controls width="720"></video>
+## Comparison video
 
-[compare_combo.mp4](docs/media/compare_combo.mp4)
+https://github.com/user-attachments/assets/fc4a3a02-10cc-48bb-a6fb-de4a25fe8593
+
+The same clip is also in [`docs/media/compare_combo.mp4`](docs/media/compare_combo.mp4).
 
 Run A is goSPL stream-power plus linear diffusion. Run B is goSPL stream-power plus Landlab DDTD and BedrockLandslider. The domain is 60×40 km over 4 Myr.
 
