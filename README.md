@@ -4,22 +4,28 @@
 
 v0.0.1
 
-This package lets you run Landlab erosion tools inside a goSPL model, without changing goSPL or Landlab themselves.
+This package is a lightweight add-on that runs Landlab mountain-erosion components on goSPL, without changing either code base.
 
-goSPL still owns the mesh, time loop, rivers, sediment routing, tectonics, and outputs. The demo uses an imposed mountain-uplift and basin-subsidence map. For river cutting, hillslope creep, or landslides, a slot can point at a built-in goSPL law or a Landlab component.
+goSPL is built for a landscape and its basin to evolve together, but its library of surface processes is still small. Landlab, from the Community Surface Dynamics Modeling System, has a rich set of mountain surface-process models, but it is not set up for basin stratigraphy. The bridge puts those Landlab components onto goSPL. goSPL still owns the mesh, the time loop, the rivers, sediment routing, tectonics, and the outputs.
+
+The aim is a source-to-sink forward model. Deep-time stratigraphy is the combined result of allogenic change in the source and of accommodation in the sink. The open question is whether the stratigraphy and lithofacies that collect in the sink can record shifts in source-mountain topography and in the geomorphic processes that shape it. Source paleotopography is often gone by the time the rocks are studied, so a forward run is one way to test that.
 
 > [!NOTE]
 > This work resulted from an ongoing collaboration with **Dr. Xuesong Ding** at the Bureau of Economic Geology, The University of Texas at Austin.
 
 ## Comparison video
 
+Can sink stratigraphy and lithofacies patterns feel shifts in source-mountain topography and geomorphic processes?
+
+Both runs share the same allogenic conditions on a 60×40 km domain over 4 Myr. goSPL carries an irregular mesh, so the landscape is not forced into the blocky pattern common on a plain regular grid.
+
+Run A uses goSPL’s built-in river incision and linear soil creep.
+
+Run B keeps that river incision and adds Landlab’s soil-depth-dependent Taylor nonlinear hillslope diffusion and the HyLands bedrock landslide model. Sediment produced in the source feeds the sink stratigraphy. The landslides are pulsed mass-wasting events. They keep reshaping both the orogen and the deep-water bathymetry in ways Run A does not. The same kind of hillslope model is a way to think about deep-water stratigraphy and bathymetry, where turbidity currents and large submarine slides may share some behavior with landslides on land.
+
 https://github.com/user-attachments/assets/fc4a3a02-10cc-48bb-a6fb-de4a25fe8593
 
 The same clip is also in [`docs/media/compare_combo.mp4`](docs/media/compare_combo.mp4).
-
-The question behind the clip is whether basin stratigraphy can record a change in mountain topography and in the surface processes that shape it. The two runs share the same uplift and subsidence. The domain is 60×40 km over 4 Myr.
-
-Run A uses goSPL’s river incision and linear hillslope creep. Run B keeps that river incision, and adds Landlab’s soil-depth-dependent hillslope diffusion and the HyLands bedrock landslide model. Sediment eroded in the mountains is passed into the basin fill. The landslides arrive as pulses, so the mountain and the deep-water floor change in steps that Run A does not show.
 
 ## Installation
 
