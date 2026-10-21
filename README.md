@@ -133,3 +133,5 @@ Optional: `gospl`, `mpi4py`, `petsc4py`.
 goSPL–Landlab bridge is licensed under the GNU Affero General Public License 3.0 or later. See [LICENSE](LICENSE).
 
 goSPL is GPL-3.0. Landlab is MIT. The pit-fill change in `gospl_patches.py` is adapted from goSPL, and that copyright stays with the goSPL authors.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to report issues, request features, and submit pull requests.
