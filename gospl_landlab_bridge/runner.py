@@ -85,7 +85,7 @@ class BridgeRunner:
             if cap.status == "needs_landlab_flow" and self.config.flow != "landlab":
                 if self.rank == 0 and bool(getattr(self.model, "verbose", False)):
                     print(
-                        f"[gospl_landlab] NOTE: {name} uses goSPL-mapped flow "
+                        f"[gospl_landlab_bridge] NOTE: {name} uses goSPL-mapped flow "
                         f"({cap.notes}).",
                         flush=True,
                     )

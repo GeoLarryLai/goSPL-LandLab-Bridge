@@ -17,8 +17,10 @@ pip install gospl-landlab-bridge
 ```
 
 ```python
-import gospl_landlab
+import gospl_landlab_bridge
 ```
+
+Python cannot import a hyphen, so the install name `gospl-landlab-bridge` is imported as `gospl_landlab_bridge`.
 
 ## Citation
 

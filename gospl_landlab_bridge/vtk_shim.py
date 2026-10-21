@@ -56,13 +56,13 @@ class _FakeContourFilter:
 
 
 class _FakeVtkModule(types.ModuleType):
-    __gospl_landlab_shim__ = True
+    __gospl_landlab_bridge_shim__ = True
     VTK_TRIANGLE = 5
 
     class vtkVersion:
         @staticmethod
         def GetVTKVersion() -> str:
-            return "gospl_landlab-shim"
+            return "gospl_landlab_bridge-shim"
 
     vtkObject = _FakeVtkObject
     vtkContourFilter = _FakeContourFilter
@@ -82,7 +82,7 @@ def install_vtk_shim(force: bool = False) -> bool:
     """
     if (not force) and "vtk" in sys.modules:
         mod = sys.modules["vtk"]
-        if getattr(mod, "__gospl_landlab_shim__", False):
+        if getattr(mod, "__gospl_landlab_bridge_shim__", False):
             return True
         return False
 
@@ -90,11 +90,11 @@ def install_vtk_shim(force: bool = False) -> bool:
     sys.modules["vtk"] = vtk_mod
 
     util = types.ModuleType("vtk.util")
-    util.__gospl_landlab_shim__ = True  # type: ignore[attr-defined]
+    util.__gospl_landlab_bridge_shim__ = True  # type: ignore[attr-defined]
     sys.modules["vtk.util"] = util
 
     ns = types.ModuleType("vtk.util.numpy_support")
-    ns.__gospl_landlab_shim__ = True  # type: ignore[attr-defined]
+    ns.__gospl_landlab_bridge_shim__ = True  # type: ignore[attr-defined]
 
     def numpy_to_vtk(array, deep=True, array_type=None):
         return _FakeArray(array, deep=deep, array_type=array_type)

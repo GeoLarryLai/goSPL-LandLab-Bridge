@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from gospl_landlab.postprocess import (  # noqa: E402
+from gospl_landlab_bridge.postprocess import (  # noqa: E402
     latest_run_dir,
     list_gospl_steps,
     load_gospl_step,

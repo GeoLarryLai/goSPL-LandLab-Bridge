@@ -80,7 +80,7 @@ def _yml_with_timing(
             if isinstance(ev, dict) and "end" in ev:
                 ev["end"] = float(end)
 
-    tmp_dir = Path(tempfile.mkdtemp(prefix="gospl_landlab_yml_"))
+    tmp_dir = Path(tempfile.mkdtemp(prefix="gospl_landlab_bridge_yml_"))
     out = tmp_dir / yml.name
     with open(out, "w") as f:
         yaml.safe_dump(cfg, f, default_flow_style=False, sort_keys=False)

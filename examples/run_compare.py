@@ -13,7 +13,7 @@ if str(ROOT) not in sys.path:
 
 
 def _boot_gospl():
-    from gospl_landlab import install_vtk_shim
+    from gospl_landlab_bridge import install_vtk_shim
 
     install_vtk_shim(force=True)
     from gospl.model import Model
@@ -31,7 +31,7 @@ def run_a(yml: Path) -> None:
 def run_b(yml: Path, bridge_yml: Path) -> None:
     import yaml
 
-    from gospl_landlab import BridgeConfig, BridgeRunner
+    from gospl_landlab_bridge import BridgeConfig, BridgeRunner
 
     Model = _boot_gospl()
     with open(bridge_yml) as f:

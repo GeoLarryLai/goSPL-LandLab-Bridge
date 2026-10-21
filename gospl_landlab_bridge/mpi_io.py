@@ -70,7 +70,7 @@ def scatter_field(global_on_root: Optional[np.ndarray], local_size: int) -> np.n
 def warn_if_large(n_global: int, threshold: int, rank: int = 0) -> None:
     if rank == 0 and n_global >= threshold:
         print(
-            f"[gospl_landlab] WARNING: gathering {n_global} nodes to rank 0 "
+            f"[gospl_landlab_bridge] WARNING: gathering {n_global} nodes to rank 0 "
             f"(threshold={threshold}). Memory/time may dominate.",
             flush=True,
         )

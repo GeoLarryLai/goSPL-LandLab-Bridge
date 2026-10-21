@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gospl-landlab-bridge"
-version = "0.0.1"
+version = "0.0.2"
 description = "Add-on bridge: run Landlab landscape-evolution components inside goSPL timesteps"
 readme = "README-pypi.md"
 requires-python = ">=3.10"
@@ -35,4 +35,4 @@ Homepage = "https://github.com/GeoLarryLai/goSPL-LandLab-Bridge"
 Repository = "https://github.com/GeoLarryLai/goSPL-LandLab-Bridge"
 
 [tool.setuptools.packages.find]
-include = ["gospl_landlab*"]
+include = ["gospl_landlab_bridge*"]

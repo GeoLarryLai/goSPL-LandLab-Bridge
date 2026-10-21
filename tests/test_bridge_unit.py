@@ -4,19 +4,19 @@ from __future__ import annotations
 
 import numpy as np
 
-from gospl_landlab.capability import probe_component
-from gospl_landlab.config import BridgeConfig
-from gospl_landlab.flow_adapter import map_gospl_flow_to_landlab, _upstream_order
-from gospl_landlab.mirror import build_raster_mirror, pull_elevation, push_elevation
-from gospl_landlab.sediment import choose_sediment_volume
-from gospl_landlab.vtk_shim import install_vtk_shim
+from gospl_landlab_bridge.capability import probe_component
+from gospl_landlab_bridge.config import BridgeConfig
+from gospl_landlab_bridge.flow_adapter import map_gospl_flow_to_landlab, _upstream_order
+from gospl_landlab_bridge.mirror import build_raster_mirror, pull_elevation, push_elevation
+from gospl_landlab_bridge.sediment import choose_sediment_volume
+from gospl_landlab_bridge.vtk_shim import install_vtk_shim
 
 
 def test_vtk_shim():
     assert install_vtk_shim(force=True) is True
     import vtk
 
-    assert vtk.vtkVersion.GetVTKVersion() == "gospl_landlab-shim"
+    assert vtk.vtkVersion.GetVTKVersion() == "gospl_landlab_bridge-shim"
 
 
 def test_mirror_roundtrip():

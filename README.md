@@ -2,7 +2,7 @@
 
 ![PyPI version](https://img.shields.io/pypi/v/gospl-landlab.svg) ![PyPI downloads](https://img.shields.io/pypi/dm/gospl-landlab.svg)
 
-v0.0.1
+v0.0.2
 
 This package is a lightweight add-on that runs Landlab mountain-erosion components on goSPL, without changing either code base.
 
@@ -34,6 +34,12 @@ pip install "landlab>=2.6"
 pip install gospl-landlab-bridge
 ```
 
+```python
+import gospl_landlab_bridge
+```
+
+Python cannot import a name that contains a hyphen, so `gospl-landlab-bridge` is imported as `gospl_landlab_bridge`.
+
 Landlab’s own install notes are at [landlab.readthedocs.io](https://landlab.readthedocs.io/en/latest/installation.html). goSPL is a separate install. Follow [goSPL’s conda instructions](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html).
 
 From a clone of this repo, instead of the PyPI line:
@@ -53,7 +59,7 @@ pip install -e .
 On a Mac, call this before `from gospl.model import Model`:
 
 ```python
-from gospl_landlab import install_vtk_shim
+from gospl_landlab_bridge import install_vtk_shim
 install_vtk_shim(force=True)
 ```
 
@@ -81,7 +87,7 @@ Contact: larrysyuhenglai@gmail.com
 Saved model files under `examples/outputs/` are local only. They are not in the repository.
 
 ```bash
-python -m gospl_landlab.mesh_builder
+python -m gospl_landlab_bridge.mesh_builder
 python examples/run_compare.py both
 python examples/make_compare_plots.py
 ```
@@ -89,7 +95,7 @@ python examples/make_compare_plots.py
 ## Package structure
 
 ```
-gospl_landlab/
+gospl_landlab_bridge/
     config.py runner.py mirror.py flow_adapter.py
     loader.py capability.py sediment.py mpi_io.py
     gospl_patches.py vtk_shim.py landlab_dtype.py
@@ -117,7 +123,7 @@ Function list: `FUNCTION_DOCUMENTATION.md`.
 Demo Run B keeps rivers on goSPL stream power. After that, elevation is pushed to a regular raster. Landlab DDTD, a D8 flow accumulator, and BedrockLandslider run there. The bridge writes back Δz and Δsoil.
 
 ```python
-from gospl_landlab import probe_component
+from gospl_landlab_bridge import probe_component
 print(probe_component("BedrockLandslider"))
 ```
 

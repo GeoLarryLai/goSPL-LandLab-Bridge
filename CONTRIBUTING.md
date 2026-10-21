@@ -41,4 +41,4 @@ licensed under the same GNU Affero General Public License v3.0
 
 ## Use of AI Coding Assistants
 
-Please note that portions of this software were developed with the assistance of AI coding tools (for example Claude and Cursor). If you use AI tools to generate your pull request, please review the generated code carefully for accuracy and for fit with the existing `gospl_landlab` design before submitting.
+Please note that portions of this software were developed with the assistance of AI coding tools (for example Claude and Cursor). If you use AI tools to generate your pull request, please review the generated code carefully for accuracy and for fit with the existing `gospl_landlab_bridge` design before submitting.
