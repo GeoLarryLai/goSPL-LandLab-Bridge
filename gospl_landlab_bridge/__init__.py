@@ -20,4 +20,4 @@ __all__ = [
     "set_blas_threads",
 ]
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"

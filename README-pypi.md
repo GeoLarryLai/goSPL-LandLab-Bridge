@@ -8,7 +8,7 @@ This work resulted from an ongoing collaboration with **Dr. Xuesong Ding** at th
 
 - Python >= 3.10
 - [Landlab](https://landlab.readthedocs.io/en/latest/installation.html) (`pip install landlab`)
-- [goSPL](https://gospl.readthedocs.io/en/latest/getting_started/installConda.html) when you want to run a model. The bridge itself imports without it.
+- [goSPL](https://gospl.readthedocs.io/en/v2026.7.14/getting_started/installPip.html) when you want to run a model. The bridge itself imports without it.
 
 ## Installation
 
