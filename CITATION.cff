@@ -3,6 +3,11 @@ message: "If you use this software, please cite it as below."
 title: "goSPL-LandLab-Bridge"
 abstract: "Lightweight add-on that runs Landlab landscape-evolution components (e.g., nonlinear hillslope diffusion, HyLands landslides) inside goSPL timesteps for source-to-sink forward modeling, without changing either code base. Developed in collaboration with Dr. Xuesong Ding."
 type: software
+doi: "10.5281/zenodo.23656976"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23656976"
+    description: "Concept DOI for all versions"
 authors:
   - family-names: Lai
     given-names: "Larry Syu-Heng"

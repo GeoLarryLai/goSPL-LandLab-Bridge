@@ -1,6 +1,6 @@
 # goSPL–Landlab bridge
 
-[![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
 
 **gospl-landlab-bridge** runs Landlab mountain-erosion components inside a goSPL timestep, without changing goSPL or Landlab. goSPL still owns the mesh, the time loop, rivers, sediment routing, and the basin outputs.
 
@@ -30,7 +30,7 @@ Python cannot import a hyphen, so the install name `gospl-landlab-bridge` is imp
 
 ## Citation
 
-Lai, L.S.-H. (2026) goSPL-LandLab-Bridge.
+Lai, L.S.-H. (2026) goSPL-LandLab-Bridge. *Zenodo*, https://doi.org/10.5281/zenodo.23656976
 
 ## Key Features
 

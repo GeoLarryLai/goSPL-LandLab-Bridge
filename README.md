@@ -1,6 +1,6 @@
 # [goSPL](https://gospl.readthedocs.io/en/stable/index.html#)–[Landlab](https://landlab.readthedocs.io/en/latest/) bridge
 
-[![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
 
 v0.0.4
 
@@ -76,7 +76,7 @@ The same clip is also in [`docs/media/compare_combo.mp4`](docs/media/compare_com
 
 ## Citation
 
-Lai, L.S.-H. (2026) goSPL-LandLab-Bridge.
+Lai, L.S.-H. (2026) goSPL-LandLab-Bridge. *Zenodo*, https://doi.org/10.5281/zenodo.23656976
 
 Contact: larrysyuhenglai@gmail.com
 
