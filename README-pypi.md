@@ -1,8 +1,14 @@
 # goSPL–Landlab bridge
 
+[![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
+
 **gospl-landlab-bridge** runs Landlab mountain-erosion components inside a goSPL timestep, without changing goSPL or Landlab. goSPL still owns the mesh, the time loop, rivers, sediment routing, and the basin outputs.
 
 This work resulted from an ongoing collaboration with **Dr. Xuesong Ding** at the Bureau of Economic Geology, The University of Texas at Austin.
+
+![goSPL SPL+LD vs goSPL SPL + Landlab nonlinear diffusion + HyLands](https://raw.githubusercontent.com/GeoLarryLai/goSPL-LandLab-Bridge/main/docs/media/compare_combo.gif)
+
+Comparison of goSPL native surface processes against goSPL with Landlab's depth-dependent nonlinear diffuser and HyLands landslider (60×40 km domain, 4 Myr). Full video: [docs/media/compare_combo.mp4](https://github.com/GeoLarryLai/goSPL-LandLab-Bridge/blob/main/docs/media/compare_combo.mp4).
 
 ## Requirements
 

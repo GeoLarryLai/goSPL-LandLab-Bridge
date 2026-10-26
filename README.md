@@ -1,8 +1,8 @@
 # [goSPL](https://gospl.readthedocs.io/en/stable/index.html#)–[Landlab](https://landlab.readthedocs.io/en/latest/) bridge
 
-![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg) ![PyPI downloads](https://img.shields.io/pypi/dm/gospl-landlab-bridge.svg)
+[![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
 
-v0.0.3
+v0.0.4
 
 This package is a lightweight add-on that runs [Landlab](https://landlab.readthedocs.io/en/latest/) mountain-erosion components on [goSPL](https://gospl.readthedocs.io/en/stable/index.html#), without changing either code base.
 
@@ -65,6 +65,10 @@ Below is a comparison of running [goSPL native surface-process models](https://g
 Both runs share the same allogenic conditions on a 60×40 km domain over 4 Myr. goSPL carries an irregular mesh, so the landscape is not forced into the blocky pattern common on a plain regular grid.
 
 Sediment produced in the source feeds the sink stratigraphy. The landslides are pulsed mass-wasting events. They keep reshaping both the orogen and the deep-water bathymetry in ways the goSPL-only run does not. The same kind of hillslope model is a way to think about deep-water stratigraphy and bathymetry, where turbidity currents and large submarine slides may share some behavior with landslides on land.
+
+![goSPL SPL+LD vs goSPL SPL + Landlab nonlinear diffusion + HyLands: topography, cumulative erosion/deposition and cross-sections over 4 Myr](docs/media/compare_combo.gif)
+
+Full-resolution video:
 
 https://github.com/user-attachments/assets/fc4a3a02-10cc-48bb-a6fb-de4a25fe8593
 

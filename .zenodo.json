@@ -1,0 +1,24 @@
+{
+  "title": "goSPL-LandLab-Bridge",
+  "description": "Lightweight add-on that runs Landlab landscape-evolution components (e.g., nonlinear hillslope diffusion, HyLands landslides) inside goSPL timesteps for source-to-sink forward modeling, without changing either code base. Developed in collaboration with Dr. Xuesong Ding.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Lai, Larry Syu-Heng",
+      "orcid": "0000-0003-4589-9729"
+    }
+  ],
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "landscape evolution",
+    "source-to-sink",
+    "goSPL",
+    "Landlab",
+    "geomorphology",
+    "stratigraphy",
+    "hillslope",
+    "landslides",
+    "python"
+  ],
+  "version": "0.0.4"
+}
