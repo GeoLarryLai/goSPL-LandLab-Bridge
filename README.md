@@ -1,6 +1,6 @@
 # [goSPL](https://gospl.readthedocs.io/en/stable/index.html#)–[Landlab](https://landlab.readthedocs.io/en/latest/) bridge
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge) [![License: AGPL-3.0-or-later](https://img.shields.io/badge/License-AGPL--3.0--or--later-blue.svg)](./LICENSE)
 
 v0.0.4
 
@@ -161,10 +161,6 @@ Python >= 3.10.
 **Output folders named `runA_gospl_spl_0`, `_1`, …** [goSPL](https://gospl.readthedocs.io/en/stable/index.html#) does that when `makedir: True`. The demo files use `makedir: False`.
 
 **Large meshes.** [Landlab](https://landlab.readthedocs.io/en/latest/) runs on MPI rank 0 after the surface is gathered.
-
-## License
-
-goSPL–Landlab bridge is licensed under the GNU Affero General Public License 3.0 or later. See [LICENSE](LICENSE).
 
 [goSPL](https://gospl.readthedocs.io/en/stable/index.html#) is GPL-3.0. [Landlab](https://landlab.readthedocs.io/en/latest/) is MIT. The pit-fill change in `gospl_patches.py` is adapted from [goSPL](https://gospl.readthedocs.io/en/stable/index.html#), and that copyright stays with the [goSPL](https://gospl.readthedocs.io/en/stable/index.html#) authors.
 

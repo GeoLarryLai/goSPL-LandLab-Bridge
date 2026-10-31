@@ -1,6 +1,6 @@
 # goSPL–Landlab bridge
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge) [![License: AGPL-3.0-or-later](https://img.shields.io/badge/License-AGPL--3.0--or--later-blue.svg)](https://github.com/GeoLarryLai/goSPL-LandLab-Bridge/blob/main/LICENSE)
 
 **gospl-landlab-bridge** runs Landlab mountain-erosion components inside a goSPL timestep, without changing goSPL or Landlab. goSPL still owns the mesh, the time loop, rivers, sediment routing, and the basin outputs.
 
@@ -39,9 +39,5 @@ Lai, L.S.-H. (2026) goSPL-LandLab-Bridge. *Zenodo*, https://doi.org/10.5281/zeno
 - Pass that sediment into goSPL stratigraphy
 
 The comparison notebook is on [GitHub](https://github.com/GeoLarryLai/goSPL-LandLab-Bridge/blob/main/goSPL-LandLab-Bridge_1_compare_SPL_vs_HyLands.ipynb).
-
-## License
-
-GNU Affero General Public License 3.0 or later. See [LICENSE](LICENSE).
 
 goSPL is GPL-3.0. Landlab is MIT. A small pit-fill patch in `gospl_patches.py` is adapted from goSPL.
