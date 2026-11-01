@@ -1,6 +1,10 @@
 # [goSPL](https://gospl.readthedocs.io/en/stable/index.html#)–[Landlab](https://landlab.readthedocs.io/en/latest/) bridge
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge) [![License: AGPL-3.0-or-later](https://img.shields.io/badge/License-AGPL--3.0--or--later-blue.svg)](./LICENSE)
+<p align="center">
+<a href="https://doi.org/10.5281/zenodo.23656976"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23656976-blue" alt="DOI"></a> <a href="https://github.com/GeoLarryLai/goSPL-LandLab-Bridge/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-lightgrey" alt="License"></a>
+<br>
+<a href="https://pypi.org/project/gospl-landlab-bridge/"><img src="https://img.shields.io/badge/python-3.10%2B-orange" alt="Python versions"></a> <a href="https://pypi.org/project/gospl-landlab-bridge/"><img src="https://img.shields.io/pypi/v/gospl-landlab-bridge?color=orange" alt="PyPI version"></a> <a href="https://pepy.tech/projects/gospl-landlab-bridge"><img src="https://img.shields.io/pepy/dt/gospl-landlab-bridge?label=pypi%20downloads&color=orange" alt="PyPI downloads"></a>
+</p>
 
 This package is a lightweight add-on that runs [Landlab](https://landlab.readthedocs.io/en/latest/) mountain-erosion components on [goSPL](https://gospl.readthedocs.io/en/stable/index.html#), without changing either code base.
 
