@@ -31,7 +31,7 @@ gospl = ["gospl", "mpi4py", "petsc4py"]
 dev = ["pytest"]
 
 [project.urls]
-Homepage = "https://www.larrysyuhenglai.com/projects.html"
+Homepage = "https://www.geolarrylai.com/projects.html"
 Repository = "https://github.com/GeoLarryLai/goSPL-LandLab-Bridge"
 
 [tool.setuptools.packages.find]
