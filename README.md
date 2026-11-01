@@ -2,8 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23656976.svg)](https://doi.org/10.5281/zenodo.23656976) [![PyPI version](https://img.shields.io/pypi/v/gospl-landlab-bridge.svg)](https://pypi.org/project/gospl-landlab-bridge/) [![PyPI downloads](https://static.pepy.tech/badge/gospl-landlab-bridge/month)](https://pepy.tech/project/gospl-landlab-bridge) [![License: AGPL-3.0-or-later](https://img.shields.io/badge/License-AGPL--3.0--or--later-blue.svg)](./LICENSE)
 
-v0.0.4
-
 This package is a lightweight add-on that runs [Landlab](https://landlab.readthedocs.io/en/latest/) mountain-erosion components on [goSPL](https://gospl.readthedocs.io/en/stable/index.html#), without changing either code base.
 
 [goSPL](https://gospl.readthedocs.io/en/stable/index.html#) is built for a landscape and its basin to evolve together, but its library of surface processes is still small. [Landlab](https://landlab.readthedocs.io/en/latest/), from the Community Surface Dynamics Modeling System, has a rich set of mountain surface-process models, but it is not set up for basin stratigraphy. The bridge puts those [Landlab](https://landlab.readthedocs.io/en/latest/) components onto [goSPL](https://gospl.readthedocs.io/en/stable/index.html#). [goSPL](https://gospl.readthedocs.io/en/stable/index.html#) still owns the mesh, the time loop, the rivers, sediment routing, tectonics, and the outputs.
