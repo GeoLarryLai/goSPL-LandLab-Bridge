@@ -21,6 +21,12 @@ The aim is a source-to-sink forward model. Deep-time stratigraphy is the combine
 pip install gospl-landlab-bridge
 ```
 
+or from `conda-forge` repository with `conda`:
+
+```bash
+conda install gospl-landlab-bridge
+```
+
 ```python
 import gospl_landlab_bridge
 ```
