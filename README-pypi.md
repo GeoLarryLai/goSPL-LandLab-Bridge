@@ -22,6 +22,12 @@ Comparison of goSPL native surface processes against goSPL with Landlab's depth-
 pip install gospl-landlab-bridge
 ```
 
+or from `conda-forge` repository with `conda`:
+
+```bash
+conda install gospl-landlab-bridge
+```
+
 ```python
 import gospl_landlab_bridge
 ```
